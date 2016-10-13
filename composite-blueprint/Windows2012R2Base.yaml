@@ -1,0 +1,76 @@
+id: Windows2012R2Base
+name: Windows 2012 R2 Base
+description: Windows 2012 64-bit Base Image, Corp Standard
+status: PUBLISHED
+properties:
+  __nsx.management_endpoint_name:
+    default: vCenter
+    secured: false
+    visible: false
+  __nsx.transport_zone_name:
+    default: Global_Transport_Zone
+    secured: false
+    visible: false
+  _archiveDays: 90
+components:
+  Win2k12_R2_Base:
+    type: Infrastructure.CatalogItem.Machine.Virtual.vSphere
+    data:
+      _cluster:
+        fixed: 1
+        min: 1
+      action:
+        fixed: LinkedClone
+      allow_storage_policies:
+        fixed: false
+      blueprint_type:
+        fixed: '1'
+      cpu:
+        default: 1
+        max: 4
+        min: 1
+      disks:
+      - capacity: 20
+        id: -1
+        initial_location: ''
+        is_clone: true
+        label: Hard disk 1
+        storage_reservation_policy: ''
+        userCreated: false
+        volumeId: 0
+      display_location:
+        fixed: false
+      guest_customization_specification: Windows 2012
+      machine_prefix:
+        fixed:
+          id: dev
+      max_network_adapters: {}
+      max_volumes: {}
+      memory:
+        default: 1024
+        max: 8192
+        min: 1024
+      nics: []
+      provisioning_workflow:
+        fixed:
+          id: CloneWorkflow
+          label: CloneWorkflow
+      security_groups: []
+      security_tags: []
+      source_machine:
+        fixed:
+          id: a23b4464-9d6d-488d-b3ef-3fa07ce1ed71
+          label: base-w12-01a
+      source_machine_external_snapshot:
+        fixed: 2
+      source_machine_name:
+        fixed: base-w12-01a
+      source_machine_vmsnapshot:
+        fixed:
+          id: '1'
+      storage:
+        default: 20
+        max: 100
+        min: 20
+layout:
+  Win2k12_R2_Base: 1,1

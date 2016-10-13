@@ -1,0 +1,7 @@
+name: "auto-generated-pkg-a44363d1-6886-4727-84f3-decdb4c5c86e"
+productVersion: "7.0.0-SNAPSHOT"
+data:
+- locator: "composite-blueprint/Windows2012R2Base.yaml"
+  name: "Windows 2012 R2 Base"
+  description: "Windows 2012 R2 Base"
+exportTime: "2015-11-09T22:00:15.754Z"
